@@ -50,3 +50,11 @@ services:
       - 8000:8000
     environment:
       - CONNECT_URL=connect:8083
+  elasticsearch:
+    image: elasticsearch:6.8.2
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+  
